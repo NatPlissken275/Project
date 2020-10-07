@@ -60,9 +60,6 @@ function browseCity(town) {
   let apiKey = "428692b6217f06d76f29c1338976dbc4";
   let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeatherCon);
-
-  apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${town}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showForecast);
 }
 
 function getCityName(event) {
