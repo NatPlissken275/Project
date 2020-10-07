@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f234651e3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>🌤</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="src/images/weather_girl1.svg"
+        alt="weather girl"
+        id="weatherGirl"
+      />
+      <h1 class="showCity">
+        <i class="far fa-compass"></i>
+        <span id="citysName"
+          >Search for a city <i class="far fa-hand-point-down"></i
+        ></span>
+      </h1>
+      <ul class="weatherIntro">
+        <li class="dayAndTime">Monday, 17:00</li>
+        <li class="weatherStatus">rain</li>
+      </ul>
+      <div class="row" id="firstInfo">
+        <div class="col" id="emojiWeather">
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather condition"
+            id="weatherIcon"
+          />
+        </div>
+        <div class="col" id="weatherDegrees">
+          <span id="degreesBig">type a city below:-)</span>
+          <span id="toCelsius">˚C</span>
+        </div>
+        <div class="col" id="furtherInfo">
+          <ul class="weatherQuality">
+            <li>humidity: <span id="humi">80%</span></li>
+            <li>wind: <span id="windSpeed">19 km/h</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="forecast">
+        <div class="col">
+          <ul>
+            <li id="day1"><i class="fas fa-tools" id="tool"></i>Forecast</li>
+            <li id="emojiDay1">
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="iconOne"
+              />
+            </li>
+            <li id="degreesOne">
+              <span id="degreesHighOne"> 14˚ </span>
+              <span id="degreesLowOne">11˚</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li id="day2">will</li>
+            <li id="emojiDay2">
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="iconTwo"
+              />
+            </li>
+            <li id="degreesTwo">
+              <span id="degressHighTwo">20˚</span>
+              <span id="degreesLowTwo">12˚</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li id="day3">be</li>
+            <li id="emojiDay3">
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="iconThree"
+              />
+            </li>
+            <li id="degreesThree">
+              <span id="degreesHighThree">21˚</span>
+              <span id="degreesLowThree">9˚</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li id="day4">displayed</li>
+            <li id="emojiDay4">
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="iconFour"
+              />
+            </li>
+            <li id="degreesFour">
+              <span id="degreesHighFour">18˚</span>
+              <span id="degreesLowFour">13˚</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li id="day5">soon<i class="fas fa-tools" id="toolSec"></i></li>
+            <li id="emojiDay5">
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="iconFive"
+              />
+            </li>
+            <li id="degreesFive">
+              <span id="degreesHighFive">17˚</span>
+              <span id="degreesLowFive">9˚</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <form action="submit" class="clickAndBrowse">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search for another city"
+          id="search-other"
+        />
+        <br />
+        <button type="button" class="btn btn-outline-primary">Search</button>
+      </form>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
